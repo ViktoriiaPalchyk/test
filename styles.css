@@ -1,12 +1,17 @@
 /*NAVBAR*/
+.rctoolbar a{
+  text-transform: uppercase;
+}
 .rctoolbar a:hover{
     text-decoration: none;
+    color: #000;
 }
 
 .login-box button{
     background-color:#d13348;
     border: 2px solid #d13348;
     border-radius: 5px;
+    font-size:14px;
     color: #fff;
     font-weight: 400;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
