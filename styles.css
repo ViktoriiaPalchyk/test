@@ -75,17 +75,17 @@
     color: #ee3a53 !important;
     }
     
-    .mat-form-field.mat-focused .mat-form-field-label{
-     color: #ee3a53 !important;
+.mat-form-field.mat-focused .mat-form-field-label{
+    color: #ee3a53 !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple{
+    background-color: #ee3a53 !important;
+}
+
+.mat-select-value.mat-select-value, .mat-input-element {
+    color: #666;
     }
-    
-    .mat-form-field.mat-focused .mat-form-field-ripple{
-     background-color: #ee3a53 !important;
-    }
-    
-    .mat-select-value.mat-select-value, .mat-input-element {
-        color: #666;
-       }
 
 /*Content table*/
 
