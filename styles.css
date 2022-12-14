@@ -8,6 +8,7 @@
     border: 2px solid #d13348;
     border-radius: 5px;
     color: #fff;
+    font-size: 14px;
     font-weight: 400;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
