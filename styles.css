@@ -1,17 +1,12 @@
 /*NAVBAR*/
-.rctoolbar a{
-  text-transform: uppercase;
-}
 .rctoolbar a:hover{
     text-decoration: none;
-    color: #000;
 }
 
 .login-box button{
     background-color:#d13348;
     border: 2px solid #d13348;
     border-radius: 5px;
-    font-size: 14px;
     color: #fff;
     font-weight: 400;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -73,4 +68,63 @@
 
 .filter__item{
   margin: 0 4px;
+}
+
+/*change color in filters label*/
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+    color: #ee3a53 !important;
+    }
+    
+    .mat-form-field.mat-focused .mat-form-field-label{
+     color: #ee3a53 !important;
+    }
+    
+    .mat-form-field.mat-focused .mat-form-field-ripple{
+     background-color: #ee3a53 !important;
+    }
+    
+    .mat-select-value.mat-select-value, .mat-input-element {
+        color: #666;
+       }
+
+/*Content table*/
+
+.grid__table__title{
+    color: #333;
+    text-transform: uppercase;
+    display: grid;
+    padding: 15px 10px;
+    grid-template-columns: 2% 10% 30% 20% 14% 14% 5%;
+}
+.grid__table__hover{
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 2% 10% 30% 20% 14% 14% 5%;
+    transition: 0.25s ease;
+}
+
+.grid__table__hover:hover{
+    background-color: #f1f1f1;
+    transform: translate(0, 30px);
+    border-radius: 10px;
+    padding: 25px 10px;
+    box-shadow: 0px 0px 15px 1px rgb(0 0 0 / 20%);
+}
+
+.separator{
+    padding: 0 0.25rem;
+    color: #cccccc;
+    font-size: 24px;
+}
+
+.id__style a{
+    color: #ee3a53;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.grid__table__hover b{
+    color: #4b4b4b;
+    text-transform: uppercase;
+    font-size: 12px;
 }
