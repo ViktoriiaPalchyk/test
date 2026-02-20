@@ -127,8 +127,14 @@ header{
     left: 5.42vw;
     right: 5.42vw;
     z-index: 999999;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
 }
 
+header.is-active-menu {
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+}
 
 
 .main--nav a{
@@ -763,7 +769,7 @@ button.nav-arrow {
     }
 
  
-    .mobile-menu {
+    /*.mobile-menu {
         position: fixed;
         top: -16px;
         left: 0;
@@ -780,7 +786,39 @@ button.nav-arrow {
         pointer-events: none;
         transform: translateY(-10px);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }*/
+
+    .mobile-menu {
+        /* 1. Повне перекриття екрану */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        /* 2. Динамічна висота без пробілів */
+        height: 100dvh; 
+        
+        /* 3. Прибираємо марджини, вони більше не потрібні */
+        margin: 0; 
+        
+        background: #FFFFFF;
+        z-index: 999998;
+        
+        /* 4. Внутрішній скрол, якщо контенту багато */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* Плавний скрол на iOS */
+        
+        display: flex;
+        flex-direction: column;
+        
+        /* 5. Паддінг зверху: висота хедера (прибл. 60-70px) + твій відступ */
+        padding: 100px 24px 40px; 
+        
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     .header--logo{
         z-index: 1000001;
     }
@@ -901,12 +939,12 @@ button.nav-arrow {
         margin-right: 16px;
         padding: 16px;
     }
-    .mobile-menu{
+    /*.mobile-menu{
         margin-left: -16px;
         margin-right: -16px;
         padding: 94px 24px 24px;
     }
-    .mobile-menu{height: calc(100vh - 62px);}
+    .mobile-menu{height: calc(100vh - 62px);}*/
     .anxiety--list{
         flex-flow: column;
     }
