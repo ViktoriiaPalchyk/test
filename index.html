@@ -80,7 +80,9 @@
                 </svg>
             </span>
         </button>
-        <div class="mobile-menu" id="mobileMenu">
+        
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
             <nav class="mobile-nav">
                 <a href="#mission">Навіщо?</a>
                 <a href="#method">Методика</a>
@@ -115,7 +117,6 @@
                 </div>
             </div>
         </div>
-    </header>
 
     <section id="main" class="flex align--center gap--66 landing--container mh-100 main--banner">
         <div class="flex flex--column flex--start">
@@ -788,14 +789,19 @@
                 if (menuToggle && mobileMenu) {
                     menuToggle.classList.remove('is-active');
                     mobileMenu.classList.remove('is-active');
+                    header.classList.remove('is-active-menu'); // Прибираємо прозорість хедера
                     document.body.style.overflow = '';
                 }
             };
 
+            // Слухач кліку (додаємо перемикання класу хедера)
             if (menuToggle && mobileMenu) {
                 menuToggle.addEventListener('click', function() {
                     const isActive = this.classList.toggle('is-active');
                     mobileMenu.classList.toggle('is-active');
+                    
+                    header.classList.toggle('is-active-menu'); // Робимо хедер прозорим або повертаємо як було
+                    
                     document.body.style.overflow = isActive ? 'hidden' : '';
                 });
             }
