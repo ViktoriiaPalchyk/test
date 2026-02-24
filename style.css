@@ -841,6 +841,13 @@ button.nav-arrow {
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    .mobile--inner {
+        padding: 100px 24px 24px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
     .header--logo{
         z-index: 1000001;
     }
