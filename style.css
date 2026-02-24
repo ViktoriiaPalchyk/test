@@ -61,6 +61,7 @@ a{text-decoration: inherit;}
 .gap--40{gap: 40px;}
 .gap--20{gap: 20px;}
 .gap--80{gap: 80px;}
+.gap--90{gap: 90px;}
 .gap--60{gap: 60px;}
 
 .fs--72{font-size: 72px;}
@@ -124,6 +125,7 @@ header{
     backdrop-filter: blur(23px);
     box-shadow: var(--shadow-main);
     position: fixed;
+    max-width: 1205px;
     left: 5.42vw;
     right: 5.42vw;
     z-index: 999999;
@@ -175,13 +177,13 @@ header.is-active-menu {
 
 
 .landing--container{
-    max-width: 1250px;
-    padding-left: 24px;
-    padding-right: 24px;
+    max-width: 1200px;
+    padding-left: 100px;
+    padding-right: 100px;
     margin: auto;
 }
 
-.banner--img{max-width: 468px;}
+.banner--img{max-width: 468px; width: 35%;}
 .banner--img--mob{display: none;}
 
 .btn-primary{
@@ -233,6 +235,22 @@ header.is-active-menu {
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1)
 }
 
+.mission--img--block{
+    width: 30%;
+}
+.mission--list--block{
+    width: 61%;
+}
+.img--mission--phone{
+    max-width: 360px;
+    width: 100%;
+}
+
+.method-title p{
+    line-height: 24px;
+    width: 769px;
+}
+
 .method--card{
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     padding: 32px;
@@ -253,6 +271,12 @@ header.is-active-menu {
 
 .method--img{
     width: 100%;
+}
+.attention{
+    display: block;
+}
+.attention--mob{
+    display: none;
 }
 
 .anxiety--list p{
@@ -305,9 +329,10 @@ footer .text--greyscale a{color: var(--text-greyscale);}
 
 .team-section {
     max-width: 1250px;
-    padding: 100px 24px 132px;
+    padding: 100px 100px 132px;
     margin: 0 auto;
     text-align: center;
+
 }
 
 .team-title {
@@ -321,9 +346,10 @@ footer .text--greyscale a{color: var(--text-greyscale);}
 .carousel-wrapper {
     display: flex;
     align-items: center;
-    gap: 22px;
     position: relative;
-    margin: 0 -15px;
+    margin-top: 28px;
+    margin-left: -15px;
+    margin-right: -15px;
     isolation: isolate;
 }
 
@@ -337,14 +363,28 @@ footer .text--greyscale a{color: var(--text-greyscale);}
     overflow-x: hidden;
 }
 
-.team-card {
-    flex: 0 0 calc(25% - 16px); 
-    min-width: 250px;
+.carousel-track.swiper {
+    width: 100%;
+    padding: 20px 10px;
+    overflow: hidden; 
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: stretch; 
+}
+
+.team-card.swiper-slide {
+    height: auto; 
     background: var(--white);
     border-radius: 16px;
     padding: 24px;
     box-shadow: var(--shadow-main);
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease;
 }
 
 .photo-holder {
@@ -399,12 +439,12 @@ footer .text--greyscale a{color: var(--text-greyscale);}
 }
 
 .btn-contact:hover{
-    color: var(--bg-light);
+    color: var(--white);
     background: var(--orange);
 }
 
 .btn-contact:hover path{
-    fill: var(--bg-light);
+    fill: var(--white);
 }
 
 .btn-contact svg{
@@ -481,7 +521,6 @@ button.nav-arrow {
     max-width: 460px;
     width: 100%;
     box-shadow:  var(--shadow-main), 0px 4px 48px rgba(255, 96, 0, 0.4); 
-    margin-left: auto; 
 }
 
 .form--title {
@@ -688,6 +727,7 @@ button.nav-arrow {
     
     color: var(--text-grey);
     line-height: 1.6;
+    text-align: left;
 }
 
 
@@ -696,6 +736,7 @@ button.nav-arrow {
     transform: translateY(0);
     transition-delay: 0.1s; 
     padding-bottom: 24px;
+    
 }
 .nav--anchor{
     position: absolute;
@@ -717,9 +758,17 @@ button.nav-arrow {
 }
 
 
+.faq--svg--icon{
+    background-color: rgba(255, 242, 235, 0.6);
+    height: 360px;
+    width: 360px;
+    justify-content: center;
+    box-shadow: var(--shadow-main);
+    padding: 25px;
+}
 
 
-/* 1. Ховаємо десктопні елементи та показуємо бургер */
+
 @media (max-width: 1200px) {
     .desktop-only {
         display: none !important;
@@ -728,8 +777,8 @@ button.nav-arrow {
     header {
         left: 0;
         right: 0;
-        margin-left: 24px ;
-        margin-right: 24px;
+        margin-left: 68px ;
+        margin-right: 68px;
     }
 
   
@@ -768,50 +817,23 @@ button.nav-arrow {
         transform: rotate(0) scale(1);
     }
 
- 
-    /*.mobile-menu {
-        position: fixed;
-        top: -16px;
-        left: 0;
-        width: -webkit-fill-available;
-        height: calc(100vh + 18px);
-        margin-left: -24px;
-        margin-right: -24px;
-        background: #FFFFFF;
-        z-index: 1000000;
-        padding: 86px 62px 40px;
-        display: flex;
-        flex-direction: column;
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(-10px);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }*/
-
     .mobile-menu {
-        /* 1. Повне перекриття екрану */
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        /* 2. Динамічна висота без пробілів */
+        width: 100%;
         height: 100dvh; 
         
-        /* 3. Прибираємо марджини, вони більше не потрібні */
         margin: 0; 
         
         background: #FFFFFF;
         z-index: 999998;
         
-        /* 4. Внутрішній скрол, якщо контенту багато */
         overflow-y: auto;
-        -webkit-overflow-scrolling: touch; /* Плавний скрол на iOS */
+        -webkit-overflow-scrolling: touch; 
         
         display: flex;
         flex-direction: column;
-        
-        /* 5. Паддінг зверху: висота хедера (прибл. 60-70px) + твій відступ */
-        padding: 100px 24px 40px; 
         
         opacity: 0;
         pointer-events: none;
@@ -878,47 +900,169 @@ button.nav-arrow {
         fill: linear-gradient( #2AABEE, #229ED9);
     }
 
+    .steps{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .how--to--start--block .step{
+        width:auto;
+    }
+
 }
-
-@media (max-width: 991px) {
-
-    .landing--container, .method--card, .steps, .faq--block{
+@media (max-width: 1200px){
+    .fs--72{font-size: 40px;}
+    .fs--56{font-size: 30px;}
+    .main--text p, .check--list .fs--24{
+        font-size: 18px;
+    }
+    .info h4{
+        font-size: 24px;
+        width: 155px;
+    }
+    .accordion-header{
+        font-size: 20px;
+    }
+    .method--card .fs--32{
+        font-size: 22px;
+    }
+    #mission .landing--container{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+@media (max-width: 1024px) {
+    .landing--container, .team-section{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    header {
+        margin-left: 24px ;
+        margin-right: 24px;
+    }
+    .landing--container, .faq--block{
         flex-flow: column;
         text-align: center;
         align-items: center;
+        gap: 32px;
     }
     .flex--start{
         align-items: center;
     }
-    .faq-accordion{
+    .faq-accordion, .mission--list--block, .mission--img--block{
         width: 100%;
     }
-
-    .fs--72{font-size: 40px;}
-    .fs--56{font-size: 30px;}
-
-
+    .info h4, .info p{
+        width: 100%;
+        text-align: center;
+    }
     .main--banner{
-        padding: 150px 16px;
+        padding: 0 16px;
+        justify-content: center;
     }
     .banner--img{display: none;}
-    .banner--img--mob{display: block;width: 227px;}
+    .banner--img--mob{display: block;width: 400px;}
 
     .img--mission--phone{
-        width: 270px;
+        max-width: 270px;
     }
     .img--bg--phone{
         width: 100%;
     }
 
+    .nav--anchor{
+        top: -24px;
+    }
     .nav--link{
         font-size: 24px;
+        border-radius: 8px;
+        width: 241px;
+        padding: 10px;
     }
 
+    .method-title p{
+        width: auto;
+    }
     .method--card{padding: 24px;}
     .method--card-block{
         width: 100%;
+        text-align: left;
     }
+
+    .form--card {
+        padding: 24px;
+    }
+
+    .how--to--start--block{
+        padding: 64px 0 48px;
+    }
+
+    .step h3{
+        margin-bottom: 32px;
+    }
+
+    .anxiety--list{
+        justify-content: center;
+    }
+    .how--to--start--block .cta{
+        background-image: url(img/cta_bg_mob.png);
+        background-size: cover;
+        background-position-y: bottom;
+        padding: 50px 16px;
+        gap: 16px;
+        border-radius: 8px;
+        margin-top: 32px;
+        width: -webkit-fill-available;
+    }
+    .how--to--start--block .cta h3{
+        width: 338px;
+    }
+    .how--to--start--block .cta .fs--48{
+        font-size: 22px;
+    }
+
+    .faq--container .btn-secondary{
+        margin-top: 32px;
+    }
+
+    .footer--information{
+        border: none;
+        margin: 0;
+        padding: 0;
+        flex-flow: column-reverse;
+        align-items: center;
+    }
+    .footer--social--info{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-top: 24px;
+    }
+
+    .copyright{
+        padding-top: 16px;
+        margin-top: 16px;
+        border-top: 1px solid var(--text-greyscale);
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-arrow {
+        display: none;
+    }
+    .carousel-wrapper {
+        margin: 0;
+    }
+
+    
+    
+    .faq--svg--icon{
+        width: 100%;
+        height: 200px;
+        
+    }
+
+    
 }
 
 
@@ -928,11 +1072,47 @@ button.nav-arrow {
     }
 }
 
+@media(max-width:768px){
+    .team-section{
+        overflow: hidden;
+    }
+    .banner--img--mob{width: 227px;}
+
+    .method--card:nth-child(even){
+        flex-flow: column-reverse;
+    }
+    .method--card{
+        flex-flow: column;
+    }
+    .method--card-block{
+        padding: 0;
+    }
+    .method--card img{
+        height: 350px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .method--card-block p{
+        text-align: left;
+    }
+    .method--card .btn-primary{
+        width: -webkit-fill-available;
+    }
+    .method--icon{
+        display: none;
+    }
+    .method--card .fs--32{
+        text-align: center;
+    }
+}
 
 @media(max-width:600px){
     .pt--120{padding-top: 48px;}
     .pb--120{padding-bottom: 48px;}
 
+    .landing--container{
+        padding: 48px 16px;
+    }
 
     header {
         margin-left: 16px;
@@ -945,12 +1125,149 @@ button.nav-arrow {
         padding: 94px 24px 24px;
     }
     .mobile-menu{height: calc(100vh - 62px);}*/
+
+    .main--banner{
+        justify-content: center;
+        padding: 0 16px;
+    }
+    .main--subtitle{
+        margin: 16px 0 24px;
+        text-align: left;
+    }
+    .main--text{
+        gap: 8px;
+        
+    }
+    .main--text p{
+        text-align: left;
+        line-height: 130%;
+    }
+
+    .main--banner .btn-primary, .anxiety--text .btn-primary, .method--card .btn-primary{
+        width: -webkit-fill-available;
+    }
+
     .anxiety--list{
         flex-flow: column;
     }
     .anxiety--list p{width: -webkit-fill-available;}
     
+    .method-title p, .anxiety--text p{
+        text-align: left;
+    }
     .method--icon{
         display: none;
     }
+
+    .method--card img{
+        height: 200px;
+    }
+
+    .attention--mob{
+        display: block;
+    }
+    .attention{
+        display: none;
+    }
+
+    .how--to--start--block .cta h3{
+        width: auto;
+    }
+    .how--to--start--block .step {
+        width: auto;
+    }
+
+    .faq--container .landing--container{
+        gap: 32px;
+    }
+
+    .faq--block{
+        gap: 24px;
+    }
+
+    
+
+    .faq--svg--icon svg{
+        width: 121px;
+    }
+
+    .check--list .fs--24{
+        text-align: left;
+        line-height: 130%;
+    }
+
+    .form--card{
+        max-width: -webkit-fill-available;
+    }
+
+    .footer{
+        padding: 16px;
+    }
+    .footer .footer--logo{
+        gap: 8px;
+    }
+
+    .footer .footer--logo svg{
+        width: 242px;
+        height: auto;
+    }
+    .footer .footer--logo h3{
+        font-size: 18px;
+    }
+
+
+    .team-section {
+        padding: 60px 0;
+    }
+
+    .info h4 {
+        font-size: 24px;
+    }
+
+
+    /* --- КОНТЕЙНЕР СЛАЙДЕРА --- */
+    .carousel-track.swiper {
+        width: 100%;
+        padding: 40px 0; /* Додаємо вертикальні відступи, щоб було місце для збільшення */
+        overflow: visible; /* Важливо! Дозволяє бачити сусідні слайди за межами контейнера */
+    }
+
+    .swiper-wrapper {
+        align-items: center; /* Вирівнюємо слайди по центру вертикально */
+    }
+
+    /* --- СЛАЙД (КАРТКА) --- */
+    .team-card.swiper-slide {
+        width: 85%;
+        height: auto;
+        background: var(--white);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: var(--shadow-main);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        
+        /* Ефект зменшення та затемнення */
+        transform: scale(0.9) !important; 
+        opacity: 0.5; /* Робимо напівпрозорими */
+        transition: all 0.3s ease; /* Плавний перехід */
+    }
+
+   
+    .team-card.swiper-slide-active {
+        transform: scale(1.05) !important; 
+        opacity: 1; 
+        z-index: 10; 
+    }
+    .dot-line {
+        width: 45%;
+    }
+
+
+    .steps{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
 }

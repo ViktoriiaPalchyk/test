@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EDtool</title>
+    <title>EDtoon</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
+
+
 <body>
     <header class="flex justify--between align--center">
         <a href="#main" class="header--logo">
@@ -83,54 +88,61 @@
         
     </header>
     <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile--inner">
             <nav class="mobile-nav">
-                <a href="#mission">Навіщо?</a>
-                <a href="#method">Методика</a>
-                <a href="#steps">Як почати?</a>
-                <a href="#team">Команда</a>
-                <a href="#faq">Популярні питання</a>
-                <a href="#" class="telegram">
-                    <span>Канал проєкту у Telegram</span>
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_116_504_mob)">
-                            <path d="M20 4C15.7575 4 11.685 5.68675 8.6875 8.68625C5.68693 11.687 4.00086 15.7565 4 20C4 24.2417 5.6875 28.3142 8.6875 31.3137C11.685 34.3132 15.7575 36 20 36C24.2425 36 28.315 34.3132 31.3125 31.3137C34.3125 28.3142 36 24.2417 36 20C36 15.7583 34.3125 11.6858 31.3125 8.68625C28.315 5.68675 24.2425 4 20 4Z" fill="url(#paint0_linear_116_504_mob)"/>
-                            <path d="M11.2421 19.831C15.9071 17.799 19.0171 16.4593 20.5721 15.812C25.0171 13.9637 25.9396 13.6427 26.5421 13.6319C26.6746 13.6297 26.9696 13.6625 27.1621 13.8181C27.3221 13.9494 27.3671 14.1269 27.3896 14.2515C27.4096 14.376 27.4371 14.6597 27.4146 14.8812C27.1746 17.4112 26.1321 23.5507 25.6021 26.3845C25.3796 27.5835 24.9371 27.9855 24.5096 28.0247C23.5796 28.1102 22.8746 27.4107 21.9746 26.821C20.5671 25.8977 19.7721 25.3232 18.4046 24.4225C16.8246 23.3815 17.8496 22.8092 18.7496 21.8742C18.9846 21.6295 23.0796 17.9057 23.1571 17.568C23.1671 17.5257 23.1771 17.3682 23.0821 17.2852C22.9896 17.202 22.8521 17.2305 22.7521 17.253C22.6096 17.285 20.3621 18.772 16.0021 21.7137C15.3646 22.1522 14.7871 22.366 14.2671 22.3547C13.6971 22.3425 12.5971 22.0317 11.7796 21.7662C10.7796 21.4405 9.98213 21.2682 10.0521 20.715C10.0871 20.427 10.4846 20.1322 11.2421 19.831Z" fill="white"/>
-                            </g>
-                            <defs>
-                            <linearGradient id="paint0_linear_116_504_mob" x1="1604" y1="4" x2="1604" y2="3204" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#2AABEE"/>
-                            <stop offset="1" stop-color="#229ED9"/>
-                            </linearGradient>
-                            <clipPath id="clip0_116_504_mob">
-                            <rect width="32" height="32" fill="white" transform="translate(4 4)"/>
-                            </clipPath>
-                            </defs>
-                        </svg>
-                </a>
+            <a href="#mission">Навіщо?</a>
+            <a href="#method">Методика</a>
+            <a href="#steps">Як почати?</a>
+            <a href="#team">Команда</a>
+            <a href="#faq">Популярні питання</a>
+            <a href="#" class="telegram">
+                <span>Канал проєкту у Telegram</span>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_116_504_mob)">
+                        <path d="M20 4C15.7575 4 11.685 5.68675 8.6875 8.68625C5.68693 11.687 4.00086 15.7565 4 20C4 24.2417 5.6875 28.3142 8.6875 31.3137C11.685 34.3132 15.7575 36 20 36C24.2425 36 28.315 34.3132 31.3125 31.3137C34.3125 28.3142 36 24.2417 36 20C36 15.7583 34.3125 11.6858 31.3125 8.68625C28.315 5.68675 24.2425 4 20 4Z" fill="url(#paint0_linear_116_504_mob)"/>
+                        <path d="M11.2421 19.831C15.9071 17.799 19.0171 16.4593 20.5721 15.812C25.0171 13.9637 25.9396 13.6427 26.5421 13.6319C26.6746 13.6297 26.9696 13.6625 27.1621 13.8181C27.3221 13.9494 27.3671 14.1269 27.3896 14.2515C27.4096 14.376 27.4371 14.6597 27.4146 14.8812C27.1746 17.4112 26.1321 23.5507 25.6021 26.3845C25.3796 27.5835 24.9371 27.9855 24.5096 28.0247C23.5796 28.1102 22.8746 27.4107 21.9746 26.821C20.5671 25.8977 19.7721 25.3232 18.4046 24.4225C16.8246 23.3815 17.8496 22.8092 18.7496 21.8742C18.9846 21.6295 23.0796 17.9057 23.1571 17.568C23.1671 17.5257 23.1771 17.3682 23.0821 17.2852C22.9896 17.202 22.8521 17.2305 22.7521 17.253C22.6096 17.285 20.3621 18.772 16.0021 21.7137C15.3646 22.1522 14.7871 22.366 14.2671 22.3547C13.6971 22.3425 12.5971 22.0317 11.7796 21.7662C10.7796 21.4405 9.98213 21.2682 10.0521 20.715C10.0871 20.427 10.4846 20.1322 11.2421 19.831Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <linearGradient id="paint0_linear_116_504_mob" x1="1604" y1="4" x2="1604" y2="3204" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#2AABEE"/>
+                        <stop offset="1" stop-color="#229ED9"/>
+                        </linearGradient>
+                        <clipPath id="clip0_116_504_mob">
+                        <rect width="32" height="32" fill="white" transform="translate(4 4)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+            </a>
             </nav>
-            
+
             <div class="mobile-footer">
-                
-                <div class="mobile-buttons">
-                    <a href="#" class="btn-primary text--center">Розпочати тестування</a>
-                    <a href="#" class="btn-secondary text--center">Перейти в додаток</a>
-                </div>
+
+            <div class="mobile-buttons">
+                <a href="#" class="btn-primary text--center">Розпочати тестування</a>
+                <a href="#" class="btn-secondary text--center">Перейти в додаток</a>
+            </div>
             </div>
         </div>
+        
+    </div>
 
     <section id="main" class="flex align--center gap--66 landing--container mh-100 main--banner">
-        <div class="flex flex--column flex--start">
+        <div class="flex flex--column flex--start banner--text">
             <h1 class="fs--72 lh--130 fw--400 t--uppercase ">
                 ВІТАЮ! <br>
                 <span class="t-normal fw--700 text--orange">Я - курча ЕДІ</span>
             </h1>
             <img src="img/30493be7d16c337841787d20dcb2fc1b511022ca.gif" alt="" class="banner--img--mob">
-            <p class="fs--24 fw--600 lh--120 ls--2 mt--24 mb--16">Мобільний помічник у стані надмірної тривожності</p>
-            <p class="fw--400 fs--20 lh--30">
-                Допомагаю батькам і дітям покращитиментальне здоров’я та відновити емоційний зв'язок в родині! 
-                <br><br>
-                Тут ви знайдете персоналізовані рекомендації щодо індивідуальної роботи з дитиною, інтерактивні вправи для швидкого збалансування та професійну психологічну підтримку.
-            </p>
+            <p class="main--subtitle fs--24 fw--600 lh--120 ls--2 mt--24 mb--16">Мобільний помічник у стані надмірної тривожності</p>
+            <div class="main--text flex flex--column gap--24">
+                <p class="fw--400 fs--20 lh--30">
+                    Допомагаю батькам і дітям покращитиментальне здоров’я та відновити емоційний зв'язок в родині! 
+                </p>
+                <p class="fw--400 fs--20 lh--30">
+                    Тут ви знайдете персоналізовані рекомендації щодо індивідуальної роботи з дитиною, інтерактивні вправи для швидкого збалансування та професійну психологічну підтримку.
+                </p>
+            </div>
+            
 
             <a href="#" class="btn-primary mt--32">Розпочати тестування</a>
         </div>
@@ -141,12 +153,12 @@
         <div class="nav--anchor">
             <h4 class="nav--link bg--white">Навіщо?</h4>
         </div>
-        <div class="landing--container pt--160 flex align--center gap--66">
-            <div>
+        <div class="landing--container pt--160 pb--48 flex align--center gap--90">
+            <div class="mission--img--block">
                 <img src="img/Content.png" alt="" class="relative img--mission--phone">
                 <img src="img/Vector.png" alt=" " class="absolute img--bg--phone">
             </div>
-            <div class="flex flex--column gap--32">
+            <div class=" mission--list--block flex flex--column gap--32">
                 <h2 class="fs--56 lh--125 fw--700 t--uppercase">
                     Поширені ознаки тривожності
                 </h2>
@@ -162,7 +174,7 @@
                     <p>Нервове збудження</p>
                     <p>М’язова напруга</p>
                 </div>
-                <div class="flex flex--column gap--24 flex--start">
+                <div class="flex flex--column gap--24 flex--start anxiety--text">
                     <p class="fs--24 fw--600 lh--120 ls--2">Якщо ви помітили у дитини деякі з цих симптомів,важливо пройти з нею тест для визначення рівня тривожності</p>
                     <a href="#" class="btn-primary">Перейти до тесту</a>
                 </div>
@@ -175,9 +187,9 @@
 
     <section id="method">
         <div class="landing--container pt--120 pb--120 flex flex--column gap--40">
-            <div>
+            <div class="method-title flex flex--column align--center gap--16">
                 <h2 class="fs--56 lh--125 fw--700 t--uppercase text--orange text--center">методика EDTOON</h2>
-                <p class="fw--400 fs--20 lh--30 text--center">Комплексний підхід для батьків і дітей: від діагностики до батьківських груп підтримки та індивідуальної терапії</p>
+                <p class="fw--500 fs--16 lh--30 text--center">Комплексний підхід для батьків і дітей: від діагностики до батьківських груп підтримки та індивідуальної терапії</p>
             </div>
             
             <div class="method--card flex flex--center gap--32">
@@ -190,11 +202,12 @@
                         <br><br>
                         На основі результатів тесту батькам пропонується Індивідуальний курс для стабілізації психологічного стану дитини із професійними рекомендаціями і вправами.
                     </p>
+                    <p class="mt--16 attention--mob"><b>Звертаємо увагу</b>, що дана «самодіагностика» є лише орієнтиром у необхідності почати роботу з тривожністю, тому рекомендуємо завжди звертатися до спеціаліста (психолога, психотерапевта) для підтвердження результатів тесту і професійної консультації.</p>
                     <button href="#" class="btn-primary mt--32">Перейти до тесту</button>
                 </div>
                 <div class="pr--32 pb--32 pt--32 method--card-block">
                     <img class="br--16 method--img" src="img/Image 04.jpg" alt="">
-                    <p class="mt--32"><b>Звертаємо увагу</b>, що дана «самодіагностика» є лише орієнтиром у необхідності почати роботу з тривожністю, тому рекомендуємо завжди звертатися до спеціаліста (психолога, психотерапевта) для підтвердження результатів тесту і професійної консультації.</p>
+                    <p class="mt--32 attention"><b>Звертаємо увагу</b>, що дана «самодіагностика» є лише орієнтиром у необхідності почати роботу з тривожністю, тому рекомендуємо завжди звертатися до спеціаліста (психолога, психотерапевта) для підтвердження результатів тесту і професійної консультації.</p>
                 </div>
             </div>
             
@@ -309,26 +322,27 @@
                 </div>
             </div>
             <div class="cta flex flex--column align--center br--32 gap--32">
-                <h3 class="fs--48 fw--600 lh--120 mb--16 text--center text--white">Почніть шлях до покращення ментального здоров’я вже сьогодні.</h3>
+                <h3 class="fs--48 fw--600 lh--120 text--center text--white">Почніть шлях до покращення ментального здоров’я вже сьогодні.</h3>
                 <button href="#" class="btn-secondary">Розпочати тестування</button>
             </div>
         </div>
     </section>
 
     <div id="team" class="team-section">
-        <h2 class="fs--56 text--orange lh--125 fw--700">КОМАНДА EDTOON</h2>
+    <h2 class="fs--56 text--orange lh--125 fw--700">КОМАНДА EDTOON</h2>
 
-        <div class="carousel-wrapper">
-            <button class="nav-arrow nav-arrow-left" onclick="changeSlide(0)">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="-0.5" y="0.5" width="47" height="47" rx="23.5" transform="matrix(-1 0 0 1 47 0)" stroke="#20160E"/>
-                    <path d="M27.333 16L19.333 24L27.333 32" stroke="#20160E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            
+    <div class="carousel-wrapper">
+        <button class="nav-arrow nav-arrow-left" id="prev-btn">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="-0.5" y="0.5" width="47" height="47" rx="23.5" transform="matrix(-1 0 0 1 47 0)" stroke="#20160E"/>
+                <path d="M27.333 16L19.333 24L27.333 32" stroke="#20160E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
 
-            <div class="carousel-track" id="track">
-                <div class="team-card">
+        <div class="carousel-track swiper" id="track">
+            <div class="swiper-wrapper">
+                <div class="team-card swiper-slide">
                     <div class="photo-holder">
                         <img src="img/Iryna_Malamuzh.png">
                     </div>
@@ -351,7 +365,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card">
+                <div class="team-card swiper-slide">
                     <div class="photo-holder">
                         <img src="img/Oleg_Malamuzh.png">
                     </div>
@@ -374,7 +388,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card">
+                <div class="team-card swiper-slide">
                     <div class="photo-holder">
                         <img src="img/Oleksiy_Korzhenko.png">
                     </div>
@@ -397,7 +411,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card">
+                <div class="team-card swiper-slide">
                     <div class="photo-holder">
                         <img src="img/Viktor_Pylzhykov.png">
                     </div>
@@ -420,8 +434,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="team-card">
+
+                <div class="team-card swiper-slide">
                     <div class="photo-holder">
                         <img src="img/Iryna_Malamuzh.png">
                     </div>
@@ -444,7 +458,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card">
+                <div class="team-card swiper-slide">
                     <div class="photo-holder">
                         <img src="img/Oleg_Malamuzh.png">
                     </div>
@@ -467,7 +481,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card">
+                <div class="team-card swiper-slide">
                     <div class="photo-holder">
                         <img src="img/Oleksiy_Korzhenko.png">
                     </div>
@@ -490,7 +504,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-card">
+                <div class="team-card swiper-slide">
                     <div class="photo-holder">
                         <img src="img/Viktor_Pylzhykov.png">
                     </div>
@@ -513,52 +527,41 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
-
-            <button class="nav-arrow nav-arrow-right" onclick="changeSlide(1)">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#20160E"/>
-                    <path d="M20.667 16L28.667 24L20.667 32" stroke="#20160E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
         </div>
 
-        <div class="pagination-dots">
-            <div class="dot-line active" id="dot-0" onclick="changeSlide(0)"></div>
-            <div class="dot-line" id="dot-1" onclick="changeSlide(1)"></div>
-        </div>
+        <button class="nav-arrow nav-arrow-right" id="next-btn">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#20160E"/>
+                <path d="M20.667 16L28.667 24L20.667 32" stroke="#20160E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="pagination-dots">
+        <div class="dot-line active" id="dot-0" onclick="changeSlide(0)"></div>
+        <div class="dot-line" id="dot-1" onclick="changeSlide(1)"></div>
+    </div>
     </div>
 
     <section id="faq" class="faq--container">
         <div class="landing--container flex flex--column align--center pt--120 pb--48 gap--60">
             <h2 class="fs--56 fw--700 lh--125 t--uppercase">Популярні питання</h2>
             <div class="faq--block flex gap--80">
-                <svg width="392" height="392" viewBox="0 0 392 392" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <foreignObject x="-7" y="-9" width="406" height="406"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(11.5px);clip-path:url(#bgblur_0_116_297_clip_path);height:100%;width:100%"></div></foreignObject><g filter="url(#filter0_d_116_297)" data-figma-bg-blur-radius="23">
-                    <rect x="16" y="14" width="360" height="360" rx="16" fill="#FFF2EB" fill-opacity="0.6" shape-rendering="crispEdges"/>
-                    <g clip-path="url(#clip1_116_297)">
-                    <path d="M285.995 225.816C285.995 204.59 274.425 185.534 256.806 175.37C255.525 174.631 253.961 175.574 253.881 177.05C251.706 217.331 219.327 249.71 179.047 251.885C177.57 251.964 176.627 253.529 177.366 254.81C187.53 272.429 206.587 283.999 227.812 283.999C237.999 283.999 247.913 281.36 256.682 276.339C257.154 276.069 257.713 275.993 258.237 276.138L282.34 282.804C283.837 283.219 285.215 281.841 284.8 280.344L278.134 256.241C277.989 255.717 278.065 255.158 278.335 254.686C283.356 245.917 285.995 236.003 285.995 225.816Z" fill="#FF6000"/>
-                    <path d="M243.461 172.73C243.461 134.832 212.629 104 174.73 104C136.832 104 106 134.832 106 172.73C106 184.939 109.212 196.83 115.315 207.299C115.452 207.534 115.49 207.814 115.417 208.075L106.723 239.506C106.516 240.255 107.205 240.944 107.954 240.737L139.386 232.044C139.647 231.971 139.927 232.009 140.162 232.146C150.631 238.249 162.522 241.461 174.73 241.461C212.629 241.461 243.461 210.629 243.461 172.73ZM164.231 155.735C164.179 156.285 163.736 156.734 163.184 156.734H154.637C154.084 156.734 153.634 156.286 153.66 155.734C154.184 144.565 163.434 135.641 174.73 135.641C186.362 135.641 195.824 145.103 195.824 156.734C195.824 162.638 193.325 168.313 188.965 172.301L180.329 180.205C180.122 180.394 180.004 180.662 180.004 180.942V187.727C180.004 188.279 179.556 188.727 179.004 188.727H170.457C169.905 188.727 169.457 188.279 169.457 187.727V176.298C169.457 176.017 169.575 175.75 169.782 175.56L181.844 164.52C184.058 162.494 185.277 159.73 185.277 156.734C185.277 150.918 180.546 146.188 174.73 146.188C169.251 146.188 164.735 150.386 164.231 155.735ZM169.457 200.273C169.457 199.721 169.905 199.273 170.457 199.273H179.004C179.556 199.273 180.004 199.721 180.004 200.273V208.82C180.004 209.373 179.556 209.82 179.004 209.82H170.457C169.905 209.82 169.457 209.373 169.457 208.82V200.273Z" fill="#FF6000"/>
-                    </g>
-                    </g>
-                    <defs>
-                    <filter id="filter0_d_116_297" x="-7" y="-9" width="406" height="406" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dy="2"/>
-                    <feGaussianBlur stdDeviation="8"/>
-                    <feComposite in2="hardAlpha" operator="out"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_116_297"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_116_297" result="shape"/>
-                    </filter>
-                    <clipPath id="bgblur_0_116_297_clip_path" transform="translate(7 9)"><rect x="16" y="14" width="360" height="360" rx="16"/>
-                    </clipPath><clipPath id="clip1_116_297">
-                    <rect width="180" height="180" fill="white" transform="translate(106 104)"/>
-                    </clipPath>
-                    </defs>
-                </svg>
+                <div class="faq--svg--icon br--16 flex flex--center align--center">
+                    <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_116_299)">
+                        <path d="M179.995 121.816C179.995 100.59 168.425 81.5341 150.806 71.3701C149.525 70.6314 147.961 71.5743 147.881 73.0504C145.706 113.331 113.327 145.71 73.0465 147.885C71.5704 147.964 70.6275 149.529 71.3662 150.81C81.5302 168.429 100.587 179.999 121.812 179.999C131.999 179.999 141.913 177.36 150.682 172.339C151.154 172.069 151.713 171.993 152.237 172.138L176.34 178.804C177.837 179.219 179.215 177.841 178.8 176.344L172.134 152.241C171.989 151.717 172.065 151.158 172.335 150.686C177.356 141.917 179.995 132.003 179.995 121.816Z" fill="#FF6000"/>
+                        <path d="M137.461 68.7305C137.461 30.8318 106.629 0 68.7305 0C30.8318 0 0 30.8318 0 68.7305C0 80.9391 3.21209 92.8297 9.31534 103.299C9.45214 103.534 9.48973 103.814 9.41731 104.075L0.72315 135.506C0.51601 136.255 1.20466 136.944 1.95351 136.737L33.3857 128.044C33.6474 127.971 33.9274 128.009 34.162 128.146C44.6312 134.249 56.5219 137.461 68.7305 137.461C106.629 137.461 137.461 106.629 137.461 68.7305ZM58.2305 51.7354C58.1786 52.2853 57.7359 52.7344 57.1836 52.7344H48.6367C48.0844 52.7344 47.6343 52.2859 47.6601 51.7342C48.1839 40.565 57.4339 31.6406 68.7305 31.6406C80.3623 31.6406 89.8242 41.1026 89.8242 52.7344C89.8242 58.6382 87.3248 64.3126 82.9646 68.3006L74.3288 76.2046C74.1218 76.3941 74.0039 76.6617 74.0039 76.9423V83.7266C74.0039 84.2789 73.5562 84.7266 73.0039 84.7266H64.457C63.9048 84.7266 63.457 84.2789 63.457 83.7266V72.2978C63.457 72.0172 63.5749 71.7496 63.7819 71.5602L75.8441 60.5196C78.0579 58.494 79.2774 55.7295 79.2774 52.7344C79.2774 46.9185 74.5464 42.1875 68.7305 42.1875C63.2514 42.1875 58.7353 46.3863 58.2305 51.7354ZM63.457 96.2734C63.457 95.7212 63.9048 95.2734 64.457 95.2734H73.0039C73.5562 95.2734 74.0039 95.7212 74.0039 96.2734V104.82C74.0039 105.373 73.5562 105.82 73.0039 105.82H64.457C63.9048 105.82 63.457 105.373 63.457 104.82V96.2734Z" fill="#FF6000"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_116_299">
+                        <rect width="180" height="180" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
 
                 <div class="faq-accordion flex flex--column">
                     <div class="accordion-item">
@@ -725,8 +728,8 @@
             <h3 class="t--uppercase fs--28 lh--125">Допомога в кишеньці</h3>
         </div>
         <div class="flex justify--between text--greyscale footer--information">
-            <p>© 2025 Edtoon. Всі права захищені</p>
-            <div class="flex gap--40">
+            <p class="copyright">© 2025 Edtoon. Всі права захищені</p>
+            <div class="flex gap--40 footer--social--info">
                 <a href="#">Юридична інформація</a>
                 <a href="#">Правила користування</a>
                 <a href="#">Політика конфіденційності</a>
@@ -736,30 +739,52 @@
     </footer>
 
     <script>
-        const track = document.getElementById('track');
-        const dots = [document.getElementById('dot-0'), document.getElementById('dot-1')];
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('#track', {
+                loop: true,
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto', 
+                spaceBetween: 20,
 
-        function changeSlide(index) {
-            const cardWidth = track.querySelector('.team-card').offsetWidth + 22; 
-            const scrollAmount = cardWidth * 4;
+                breakpoints: {
+                    0: {
+                        spaceBetween: 0, 
+                        slidesPerView: 1.2, 
+                    },
+                    768: {
+                        slidesPerView: 3,     
+                        centeredSlides: false, 
+                        spaceBetween: 22,      
+                        allowTouchMove: false
+                    },
+                    1100: {
+                        slidesPerView: 4,     
+                        centeredSlides: false, 
+                        spaceBetween: 22,      
+                        allowTouchMove: false
+                    }
+                },
 
-            track.scrollLeft = index * scrollAmount;
+                navigation: {
+                    nextEl: '#next-btn',
+                    prevEl: '#prev-btn',
+                },
 
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[index].classList.add('active');
-        }
+                on: {
+                    slideChange: function () {
+                        const dots = [document.getElementById('dot-0'), document.getElementById('dot-1')];
+                        if (!dots[0] || !dots[1]) return;
+                        const activeDot = this.realIndex % 2;
+                        dots.forEach((dot, i) => {
+                            dot.classList.toggle('active', i === activeDot);
+                        });
+                    },
+                },
+            });
 
-        track.addEventListener('scroll', () => {
-            const scrollPos = track.scrollLeft;
-            const cardWidth = track.querySelector('.team-card').offsetWidth;
-            
-            if (scrollPos > cardWidth * 2) {
-                dots[0].classList.remove('active');
-                dots[1].classList.add('active');
-            } else {
-                dots[1].classList.remove('active');
-                dots[0].classList.add('active');
-            }
+            document.getElementById('dot-0').onclick = () => swiper.slideToLoop(0);
+            document.getElementById('dot-1').onclick = () => swiper.slideToLoop(1);
         });
 
         document.querySelectorAll('.accordion-header').forEach(button => {
