@@ -1168,7 +1168,7 @@ button.nav-arrow {
 
     .main--banner{
         justify-content: center;
-        padding: 0 16px;
+        padding: 100px 16px;
     }
     .main--subtitle{
         margin: 16px 0 24px;
@@ -1309,5 +1309,6 @@ button.nav-arrow {
         display: grid;
         grid-template-columns: 1fr;
     }
+
 
 }
