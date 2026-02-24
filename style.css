@@ -324,6 +324,7 @@ footer .text--greyscale a{color: var(--text-greyscale);}
     padding-top: 50px;
     margin-top: 50px;
     border-top: 1px solid var(--text-greyscale);
+    font-size: 14px;
 }
 
 
@@ -521,6 +522,10 @@ button.nav-arrow {
     max-width: 460px;
     width: 100%;
     box-shadow:  var(--shadow-main), 0px 4px 48px rgba(255, 96, 0, 0.4); 
+}
+.form--card .btn-primary{
+    width: -webkit-fill-available;
+    margin-top: 30px;
 }
 
 .form--title {
@@ -768,6 +773,31 @@ button.nav-arrow {
 }
 
 
+.form--succes{color: #1D1F22;}
+.form--success .btn-primary{
+    width: -webkit-fill-available;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; 
+}
 
 @media (max-width: 1200px) {
     .desktop-only {
@@ -869,7 +899,7 @@ button.nav-arrow {
     }
 
     .mobile-nav a {
-        font-size: 24px;
+        font-size: 23px;
         font-weight: 600;
         color: var(--text-grey);
         text-decoration: none;
@@ -1065,7 +1095,7 @@ button.nav-arrow {
     
     
     .faq--svg--icon{
-        width: 100%;
+        width: -webkit-fill-available;
         height: 200px;
         
     }
