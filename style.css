@@ -24,6 +24,7 @@ body{
     line-height: normal;
     font-size: 16px;
     margin: 0px;
+    overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6, p{
     font-family: "Nunito", sans-serif;
@@ -1312,3 +1313,4 @@ button.nav-arrow {
 
 
 }
+
